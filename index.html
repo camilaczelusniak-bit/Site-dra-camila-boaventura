@@ -16,9 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* CORES */
-/* rosa antigo: #b8857c | rosa claro fundo: #f0e6e2 | marrom: #6b3f38 | marrom claro: #9a6b63 | creme: #f7ede9 */
-
 /* NAV */
 nav {
 position: fixed; top:0; left:0; right:0; z-index:100;
@@ -31,7 +28,6 @@ display: flex; align-items:center; justify-content:space-between;
 font-family: Georgia, serif;
 font-size: 1rem; color: #6b3f38;
 text-decoration: none; font-style: italic;
-letter-spacing: 0.03em;
 }
 .nav-logo span { color: #a87c74; font-style: normal; }
 .nav-links { display:flex; gap:28px; list-style:none; }
@@ -57,7 +53,7 @@ background: #faf3f1;
 }
 .hero-left {
 display:flex; flex-direction:column; justify-content:center;
-padding: 60px 60px 60px 60px;
+padding: 60px 60px;
 }
 .hero-tag {
 font-family: Arial, sans-serif;
@@ -80,7 +76,7 @@ display:flex; flex-direction:column; gap:5px;
 }
 .hero-cred span {
 font-family: Arial, sans-serif;
-font-size: 0.78rem; color: #9a6b63; letter-spacing:0.05em;
+font-size: 0.78rem; color: #9a6b63;
 }
 .hero-desc {
 font-size: 0.98rem; color: #7a5550;
@@ -110,10 +106,10 @@ display:flex; align-items:flex-end; justify-content:center;
 }
 .hero-right img {
 width:82%; max-height:90vh;
-object-fit:cover; object-position:center top;
+object-fit:cover; object-position:center 15%;
 border-radius:180px 180px 0 0;
 box-shadow: 0 20px 60px rgba(107,63,56,0.3);
-margin-bottom:0; position:relative; z-index:1;
+position:relative; z-index:1;
 }
 .hero-deco1 {
 position:absolute; top:30px; right:30px;
@@ -157,7 +153,7 @@ gap:70px; align-items:center;
 .sobre-img-wrap { position:relative; }
 .sobre-img-wrap img {
 width:100%; aspect-ratio:3/4;
-object-fit:cover; object-position:center top;
+object-fit:cover; object-position:center 15%;
 border-radius:160px 160px 16px 16px;
 box-shadow: 0 16px 50px rgba(107,63,56,0.18);
 }
@@ -173,7 +169,7 @@ display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;
 background:#f0e4e0; border:1px solid #e4d0cb;
 color:#6b3f38; padding:7px 16px;
 border-radius:30px; font-family:Arial,sans-serif;
-font-size:0.75rem; letter-spacing:0.05em;
+font-size:0.75rem;
 }
 .sobre-content p {
 font-size:0.93rem; color:#7a5550;
@@ -187,74 +183,69 @@ background: #6b3f38;
 text-align:center;
 }
 #agendar .section-tag { justify-content:center; color:#e4d0cb; }
-#agendar .section-tag::before { background:#e8cdc9; }
-#agendar .section-title { color:#fdf6f4; }
-#agendar .section-sub { color:rgba(253,246,244,0.7); margin:0 auto 40px; }
+#agendar .section-tag::before { background:#e4d0cb; }
+#agendar .section-title { color:#fdf8f7; }
+#agendar .section-sub { color:rgba(253,248,247,0.7); margin:0 auto 40px; }
 
 .local-grid {
-display:grid; grid-template-columns:repeat(3, 1fr);
+display:grid; grid-template-columns:repeat(3,1fr);
 gap:20px; max-width:1000px; margin:0 auto;
 }
 .local-card {
-background:rgba(253,246,244,0.08);
-border:1px solid rgba(253,246,244,0.18);
-border-radius:16px; padding:30px 24px;
-text-align:left; text-decoration:none;
-color:#fdf6f4;
-display:block;
+background:rgba(253,248,247,0.08);
+border:1px solid rgba(253,248,247,0.18);
+border-radius:16px; padding:28px 22px;
+text-align:left; color:#fdf8f7;
+display:block; text-decoration:none;
 }
-.local-card:hover { background:rgba(253,246,244,0.15); }
+.local-card:hover { background:rgba(253,248,247,0.14); }
 .local-card .lc-icon { font-size:1.8rem; margin-bottom:12px; display:block; }
 .local-card h3 {
 font-family:Georgia,serif; font-size:1.1rem;
-font-weight:normal; margin-bottom:6px; color:#fdf6f4;
+font-weight:normal; margin-bottom:6px; color:#fdf8f7;
 }
 .local-card .lc-name {
 font-family:Arial,sans-serif; font-size:0.78rem;
-color:rgba(253,246,244,0.65); margin-bottom:10px;
-line-height:1.5;
+color:rgba(253,248,247,0.65); margin-bottom:12px; line-height:1.6;
 }
-.local-card .lc-btn {
+.lc-btn {
 display:inline-flex; align-items:center; gap:8px;
 background:#a87c74; color:#fff;
 padding:9px 18px; border-radius:30px;
 font-family:Arial,sans-serif; font-size:0.74rem;
 letter-spacing:0.08em; text-transform:uppercase;
-text-decoration:none; margin-top:6px;
+text-decoration:none; margin-top:4px;
 }
-.local-card .lc-btn:hover { background:#a07068; }
-.local-card .lc-btn2 {
+.lc-btn:hover { background:#c9a49c; }
+.lc-btn2 {
 display:inline-flex; align-items:center; gap:8px;
 background:transparent;
-border:1px solid rgba(253,246,244,0.4);
-color:#fdf6f4;
+border:1px solid rgba(253,248,247,0.4);
+color:#fdf8f7;
 padding:9px 18px; border-radius:30px;
 font-family:Arial,sans-serif; font-size:0.74rem;
 letter-spacing:0.08em; text-transform:uppercase;
-text-decoration:none; margin-top:6px; margin-left:6px;
+text-decoration:none; margin-top:4px; margin-left:6px;
 }
-.local-card .lc-btn2:hover { background:rgba(253,246,244,0.1); }
-.wpp-icon { display:inline-block; width:16px; height:16px; vertical-align:middle; }
+.lc-btn2:hover { background:rgba(253,248,247,0.1); }
+.wpp-icon { width:16px; height:16px; vertical-align:middle; }
 
-/* SERVICOS */
+/* SERVIÇOS */
 #servicos { background:#faf3f1; }
 #servicos .section-tag { justify-content:center; }
 #servicos .section-tag::before { display:none; }
 #servicos .section-title { text-align:center; }
-#servicos > p { text-align:center; margin:0 auto 50px; }
-
 .serv-grid {
 display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px; max-width:1100px; margin:0 auto;
+gap:18px; max-width:1100px; margin:40px auto 0;
 }
 .serv-card {
-background:#fdf8f7;
-border:1px solid #e4d0cb;
+background:#fdf8f7; border:1px solid #e4d0cb;
 border-radius:16px; padding:28px 22px;
 }
-.serv-card:hover { border-color:#a87c74; box-shadow:0 8px 30px rgba(107,63,56,0.1); }
+.serv-card:hover { border-color:#a87c74; box-shadow:0 8px 30px rgba(107,63,56,0.08); }
 .serv-card.destaque {
-background: linear-gradient(135deg, #c8978f, #9a6b63);
+background: linear-gradient(135deg, #a87c74, #7a4f48);
 color:#fff; border-color:transparent;
 }
 .serv-icon { font-size:1.6rem; margin-bottom:14px; display:block; }
@@ -267,20 +258,48 @@ font-weight:normal; color:#6b3f38; margin-bottom:8px;
 font-family:Arial,sans-serif; font-size:0.8rem;
 color:#9a6b63; line-height:1.7;
 }
-.serv-card.destaque p { color:rgba(255,255,255,0.8); }
+.serv-card.destaque p { color:rgba(255,255,255,0.82); }
+
+/* PAGAMENTO */
+#pagamento { background:#fdf8f7; text-align:center; }
+#pagamento .section-tag { justify-content:center; }
+#pagamento .section-tag::before { display:none; }
+#pagamento .section-title { text-align:center; }
+.pag-grid {
+display:grid; grid-template-columns:repeat(4,1fr);
+gap:16px; max-width:900px; margin:40px auto 0;
+}
+.pag-card {
+background:#faf3f1; border:1px solid #e4d0cb;
+border-radius:14px; padding:24px 18px; text-align:center;
+}
+.pag-card.destaque {
+background: linear-gradient(135deg, #a87c74, #7a4f48);
+border-color:transparent;
+}
+.pag-icon { font-size:1.6rem; margin-bottom:10px; display:block; }
+.pag-card h4 {
+font-family:Georgia,serif; font-size:0.95rem;
+font-weight:normal; color:#6b3f38; margin-bottom:6px;
+}
+.pag-card.destaque h4 { color:#fff; }
+.pag-card p {
+font-family:Arial,sans-serif; font-size:0.78rem;
+color:#9a6b63; line-height:1.6;
+}
+.pag-card.destaque p { color:rgba(255,255,255,0.82); }
 
 /* DEPOIMENTOS */
-#depoimentos { background:#fdf8f7; text-align:center; }
+#depoimentos { background:#faf3f1; text-align:center; }
 #depoimentos .section-tag { justify-content:center; }
 #depoimentos .section-tag::before { display:none; }
-
 .dep-grid {
 display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-gap:20px; margin-top:48px; text-align:left;
-max-width:1100px; margin-left:auto; margin-right:auto;
+gap:20px; margin:48px auto 0; text-align:left;
+max-width:1100px;
 }
 .dep-card {
-background:#faf3f1; border:1px solid #e4d0cb;
+background:#fdf8f7; border:1px solid #e4d0cb;
 border-radius:16px; padding:28px;
 }
 .dep-stars { color:#a87c74; font-size:0.85rem; margin-bottom:10px; letter-spacing:3px; }
@@ -305,7 +324,7 @@ width:36px; height:36px; border-radius:50%;
 background: linear-gradient(135deg, #e4d0cb, #a87c74);
 display:inline-flex; align-items:center; justify-content:center;
 color:#fff; font-size:0.8rem; font-weight:bold;
-margin-right:10px; vertical-align:middle;
+margin-right:10px; vertical-align:middle; flex-shrink:0;
 }
 
 /* BLOG */
@@ -320,12 +339,12 @@ font-style:italic; text-align:center;
 
 /* FOOTER */
 footer {
-background:#3a2220; color:rgba(253,246,244,0.5);
+background:#3a2220; color:rgba(253,248,247,0.5);
 text-align:center; padding:28px 40px;
 font-family:Arial,sans-serif; font-size:0.75rem;
-line-height:2; letter-spacing:0.04em;
+line-height:2;
 }
-footer strong { color:rgba(253,246,244,0.8); font-weight:normal; }
+footer strong { color:rgba(253,248,247,0.8); font-weight:normal; }
 footer a { color:#a87c74; text-decoration:none; }
 
 /* MOBILE */
@@ -341,6 +360,7 @@ section { padding:60px 24px; }
 .sobre-img-wrap { display:none; }
 .local-grid { grid-template-columns:1fr; }
 .serv-grid { grid-template-columns:1fr; }
+.pag-grid { grid-template-columns:1fr 1fr; }
 .dep-grid { grid-template-columns:1fr; }
 }
 </style>
@@ -367,10 +387,7 @@ section { padding:60px 24px; }
 <section id="hero">
   <div class="hero-left">
     <div class="hero-tag">Saúde da Mulher · Nutrologia · Acupuntura</div>
-    <h1>
-      Dra. Camila<br>Boaventura
-      <em>Czelusniak</em>
-    </h1>
+    <h1>Dra. Camila<br>Boaventura<em>Czelusniak</em></h1>
     <div class="hero-cred">
       <span>Médica Acupunturista &nbsp;·&nbsp; CRM 45.726 – BA &nbsp;·&nbsp; RQE 26.476</span>
       <span>Pós-graduada em Nutrologia – Hospital Israelita Albert Einstein</span>
@@ -419,65 +436,41 @@ section { padding:60px 24px; }
   </div>
 </section>
 
-<!-- AGENDAR CONSULTA -->
+<!-- AGENDAR -->
 
 <section id="agendar">
   <div class="section-tag">Escolha como prefere ser atendida</div>
-  <h2 class="section-title" style="color:#fdf6f4;">Agende sua <em style="color:#e4d0cb;">consulta</em></h2>
+  <h2 class="section-title" style="color:#fdf8f7;">Agende sua <em style="color:#e4d0cb;">consulta</em></h2>
   <p class="section-sub">Atendimento presencial em Salvador e Lauro de Freitas – BA, ou online para todo o Brasil.</p>
-
   <div class="local-grid">
-
-```
-<!-- Lauro de Freitas -->
-<div class="local-card">
-  <span class="lc-icon">📍</span>
-  <h3>Lauro de Freitas – BA</h3>
-  <div class="lc-name">
-    Ultra Life Medical Offices<br>
-    R. Aurelino Fróes Moreira, 363 – Lj 06<br>
-    Buraquinho, Lauro de Freitas – BA
-  </div>
-  <a href="https://wa.me/5571992755059" target="_blank" class="lc-btn">
-    <svg class="wpp-icon" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.543 5.876L.057 23.286a.75.75 0 0 0 .921.914l5.494-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.52-5.188-1.424l-.372-.22-3.863 1.034 1.058-3.77-.242-.389A9.952 9.952 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
-    WhatsApp
-  </a>
-</div>
-
-<!-- Salvador -->
-<div class="local-card">
-  <span class="lc-icon">📍</span>
-  <h3>Salvador – BA</h3>
-  <div class="lc-name">
-    Clínica Afiora Saúde<br>
-    Alameda das Algarobas, 1006<br>
-    Caminho das Árvores, Salvador – BA
-  </div>
-  <a href="https://wa.me/5571991170970" target="_blank" class="lc-btn">
-    <svg class="wpp-icon" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.543 5.876L.057 23.286a.75.75 0 0 0 .921.914l5.494-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.52-5.188-1.424l-.372-.22-3.863 1.034 1.058-3.77-.242-.389A9.952 9.952 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
-    WhatsApp
-  </a>
-</div>
-
-<!-- Telemedicina -->
-<div class="local-card">
-  <span class="lc-icon">💻</span>
-  <h3>Telemedicina</h3>
-  <div class="lc-name">
-    Atendimento online<br>
-    Para todo o Brasil<br>
-    Agendamento via Doctoralia ou WhatsApp
-  </div>
-  <a href="https://www.doctoralia.com.br/camila-boaventura-czelusniak/medico-acupunturista-nutrologo/salvador" target="_blank" class="lc-btn">
-    🗓 Doctoralia
-  </a>
-  <a href="https://wa.me/5571993149915" target="_blank" class="lc-btn2">
-    <svg class="wpp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.543 5.876L.057 23.286a.75.75 0 0 0 .921.914l5.494-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.52-5.188-1.424l-.372-.22-3.863 1.034 1.058-3.77-.242-.389A9.952 9.952 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
-    WhatsApp
-  </a>
-</div>
-```
-
+    <div class="local-card">
+      <span class="lc-icon">📍</span>
+      <h3>Lauro de Freitas – BA</h3>
+      <div class="lc-name">Ultra Life Medical Offices<br>R. Aurelino Fróes Moreira, 363 – Lj 06<br>Buraquinho, Lauro de Freitas – BA</div>
+      <a href="https://wa.me/5571992755059" target="_blank" class="lc-btn">
+        <svg class="wpp-icon" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.543 5.876L.057 23.286a.75.75 0 0 0 .921.914l5.494-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.52-5.188-1.424l-.372-.22-3.863 1.034 1.058-3.77-.242-.389A9.952 9.952 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="local-card">
+      <span class="lc-icon">📍</span>
+      <h3>Salvador – BA</h3>
+      <div class="lc-name">Clínica Afiora Saúde<br>Alameda das Algarobas, 1006<br>Caminho das Árvores, Salvador – BA</div>
+      <a href="https://wa.me/5571991170970" target="_blank" class="lc-btn">
+        <svg class="wpp-icon" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.543 5.876L.057 23.286a.75.75 0 0 0 .921.914l5.494-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.52-5.188-1.424l-.372-.22-3.863 1.034 1.058-3.77-.242-.389A9.952 9.952 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="local-card">
+      <span class="lc-icon">💻</span>
+      <h3>Telemedicina</h3>
+      <div class="lc-name">Atendimento online<br>Para todo o Brasil<br>Agendamento via Doctoralia ou WhatsApp</div>
+      <a href="https://www.doctoralia.com.br/camila-boaventura-czelusniak/medico-acupunturista-nutrologo/salvador" target="_blank" class="lc-btn">🗓 Doctoralia</a>
+      <a href="https://wa.me/5571993149915" target="_blank" class="lc-btn2">
+        <svg class="wpp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.563 4.14 1.543 5.876L.057 23.286a.75.75 0 0 0 .921.914l5.494-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.52-5.188-1.424l-.372-.22-3.863 1.034 1.058-3.77-.242-.389A9.952 9.952 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
   </div>
 </section>
 
@@ -486,8 +479,7 @@ section { padding:60px 24px; }
 <section id="servicos">
   <div class="section-tag">O que ofereço</div>
   <h2 class="section-title">Especialidades & <em>Serviços</em></h2>
-  <p class="section-sub" style="margin:0 auto 50px; text-align:center;">Tratamentos e acompanhamentos baseados em evidência, com escuta cuidadosa e abordagem personalizada.</p>
-
+  <p class="section-sub" style="margin:0 auto; text-align:center;">Tratamentos e acompanhamentos baseados em evidência, com escuta cuidadosa e abordagem personalizada.</p>
   <div class="serv-grid">
     <div class="serv-card destaque">
       <span class="serv-icon">🌸</span>
@@ -529,33 +521,29 @@ section { padding:60px 24px; }
 
 <!-- PAGAMENTO -->
 
-<section id="pagamento" style="background:#fdf8f7; padding:60px 60px; text-align:center;">
-  <div class="section-tag" style="justify-content:center;">
-    <span style="width:28px;height:1px;background:#a87c74;display:block;"></span>
-    Informações
-  </div>
+<section id="pagamento">
+  <div class="section-tag">Informações</div>
   <h2 class="section-title">Formas de <em>pagamento</em></h2>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; max-width:800px; margin:40px auto 0;">
-    <div style="background:#faf3f1; border:1px solid #e4d0cb; border-radius:14px; padding:24px 18px;">
-      <div style="font-size:1.6rem; margin-bottom:10px;">💳</div>
-      <div style="font-family:Georgia,serif; font-size:0.95rem; color:#6b3f38; margin-bottom:6px;">Cartão de Crédito</div>
-      <div style="font-family:Arial,sans-serif; font-size:0.78rem; color:#9a6b63; line-height:1.6;">À vista ou parcelado</div>
+  <div class="pag-grid">
+    <div class="pag-card">
+      <span class="pag-icon">💳</span>
+      <h4>Cartão de Crédito</h4>
+      <p>À vista ou parcelado</p>
     </div>
-    <div style="background:#faf3f1; border:1px solid #e4d0cb; border-radius:14px; padding:24px 18px;">
-      <div style="font-size:1.6rem; margin-bottom:10px;">📱</div>
-      <div style="font-family:Georgia,serif; font-size:0.95rem; color:#6b3f38; margin-bottom:6px;">Pix</div>
-      <div style="font-family:Arial,sans-serif; font-size:0.78rem; color:#9a6b63; line-height:1.6;">Transferência instantânea</div>
+    <div class="pag-card">
+      <span class="pag-icon">📱</span>
+      <h4>Pix</h4>
+      <p>Transferência instantânea</p>
     </div>
-    <div style="background:#faf3f1; border:1px solid #e4d0cb; border-radius:14px; padding:24px 18px;">
-      <div style="font-size:1.6rem; margin-bottom:10px;">💵</div>
-      <div style="font-family:Georgia,serif; font-size:0.95rem; color:#6b3f38; margin-bottom:6px;">Dinheiro</div>
-      <div style="font-family:Arial,sans-serif; font-size:0.78rem; color:#9a6b63; line-height:1.6;">Pagamento em espécie</div>
+    <div class="pag-card">
+      <span class="pag-icon">💵</span>
+      <h4>Dinheiro</h4>
+      <p>Pagamento em espécie</p>
     </div>
-    <div style="background:linear-gradient(135deg,#a87c74,#7a4f48); border-radius:14px; padding:24px 18px;">
-      <div style="font-size:1.6rem; margin-bottom:10px;">📋</div>
-      <div style="font-family:Georgia,serif; font-size:0.95rem; color:#fff; margin-bottom:6px;">Planos de Saúde</div>
-      <div style="font-family:Arial,sans-serif; font-size:0.78rem; color:rgba(255,255,255,0.8); line-height:1.6;">Atendimento particular com emissão de nota fiscal para reembolso via plano de saúde</div>
+    <div class="pag-card destaque">
+      <span class="pag-icon">📋</span>
+      <h4>Planos de Saúde</h4>
+      <p>Atendimento particular com emissão de nota fiscal para posterior solicitação de reembolso via plano de saúde</p>
     </div>
   </div>
 </section>
@@ -566,102 +554,70 @@ section { padding:60px 24px; }
   <div class="section-tag">Avaliações reais</div>
   <h2 class="section-title">O que dizem <em>minhas pacientes</em></h2>
   <p class="section-sub" style="margin:0 auto;">Avaliações do Google Meu Negócio e Doctoralia.</p>
-
   <div class="dep-grid">
-
-```
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Dra Camila é perfeita, sempre busca uma abordagem que combine com o dia a dia do paciente, atenciosa e muito confiável. Indico de olhos fechados.</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">B</span>
-    <div>
-      <div class="dep-name">Bruna C.</div>
-      <div class="dep-source">Google Meu Negócio · out/2024</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Dra Camila é perfeita, sempre busca uma abordagem que combine com o dia a dia do paciente, atenciosa e muito confiável. Indico de olhos fechados.</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">B</span>
+        <div><div class="dep-name">Bruna C.</div><div class="dep-source">Google · out/2024</div></div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Médica empática, atenta, competente e super dedicada. O tratamento está numa crescente evolução. Estou muito satisfeita!</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">C</span>
-    <div>
-      <div class="dep-name">Clarissa M.</div>
-      <div class="dep-source">Google Meu Negócio · mai/2025</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Médica empática, atenta, competente e super dedicada. O tratamento está numa crescente evolução. Estou muito satisfeita!</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">C</span>
+        <div><div class="dep-name">Clarissa M.</div><div class="dep-source">Google · mai/2025</div></div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Sem dúvidas uma profissional que sabe o que está falando. Não passa dietas mirabolantes. Escuta o paciente para entender o que pode ser feito. Não apressa a consulta.</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">L</span>
-    <div>
-      <div class="dep-name">LFBS</div>
-      <div class="dep-source">Google Meu Negócio · jul/2025</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Sem dúvidas uma profissional que sabe o que está falando. Não passa dietas mirabolantes. Escuta o paciente para entender o que pode ser feito. Não apressa a consulta.</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">L</span>
+        <div><div class="dep-name">LFBS</div><div class="dep-source">Google · jul/2025</div></div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Melhor médica que tive até hoje. Atenciosa, pensa em opções, explica ao paciente cada detalhe e sempre se preocupa.</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">B</span>
-    <div>
-      <div class="dep-name">Bruna L. F.</div>
-      <div class="dep-source">Google Meu Negócio · ago/2025</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Melhor médica que tive até hoje. Atenciosa, pensa em opções, explica ao paciente cada detalhe e sempre se preocupa.</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">B</span>
+        <div><div class="dep-name">Bruna L. F.</div><div class="dep-source">Google · ago/2025</div></div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Excelente profissional, além de ser muito atenciosa, gentil e prover uma consulta humanizada. Me senti muito acolhida e com certeza voltarei mais vezes.</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">A</span>
-    <div>
-      <div class="dep-name">Adriana</div>
-      <div class="dep-source">Google Meu Negócio · ago/2025</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Excelente profissional, além de ser muito atenciosa, gentil e prover uma consulta humanizada. Me senti muito acolhida e com certeza voltarei mais vezes.</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">A</span>
+        <div><div class="dep-name">Adriana</div><div class="dep-source">Google · ago/2025</div></div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Não conhecia a acupuntura, ela me explicou de forma clara. Gostei muito do atendimento e profissionalismo. Eu realizei o protocolo específico de Paulus para Fertilização in Vitro e deu tudo certo.</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">J</span>
-    <div>
-      <div class="dep-name">Jéssica</div>
-      <div class="dep-source">Google Meu Negócio · ago/2025</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Não conhecia a acupuntura, ela me explicou de forma clara. Gostei muito do atendimento e profissionalismo. Eu realizei o protocolo específico de Paulus para Fertilização in Vitro e deu tudo certo.</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">J</span>
+        <div><div class="dep-name">Jéssica</div><div class="dep-source">Google · ago/2025</div></div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="dep-card">
-  <span class="dep-quote-char">"</span>
-  <div class="dep-stars">★★★★★</div>
-  <p class="dep-text">Excelente profissional! Muito atenciosa! Explicou todo o tratamento detalhadamente! Amei!</p>
-  <div style="display:flex;align-items:center;">
-    <span class="dep-avatar">D</span>
-    <div>
-      <div class="dep-name">Daniela N.</div>
-      <div class="dep-source">Google Meu Negócio · set/2025</div>
+    <div class="dep-card">
+      <span class="dep-quote-char">"</span>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Excelente profissional! Muito atenciosa! Explicou todo o tratamento detalhadamente! Amei!</p>
+      <div style="display:flex;align-items:center;">
+        <span class="dep-avatar">D</span>
+        <div><div class="dep-name">Daniela N.</div><div class="dep-source">Google · set/2025</div></div>
+      </div>
     </div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 
@@ -681,4 +637,9 @@ section { padding:60px 24px; }
 <footer>
   <strong>Dra. Camila Boaventura Czelusniak</strong><br>
   CRM 45.726 – BA &nbsp;·&nbsp; RQE 26.476 &nbsp;·&nbsp; Acupuntura &nbsp;·&nbsp; Nutrologia<br>
-  <a href="/cdn-cgi/l/email-protection#583b37362c392c37183b39353134393a37392e3d362c2d2a39763b3735763a2a"><span class="__cf_email__" data-cfemail="593a36372d382d361
+  <a href="mailto:contato@camilaboaventura.com.br">contato@camilaboaventura.com.br</a><br><br>
+  © 2026 · Todos os direitos reservados
+</footer>
+
+</body>
+</html>
